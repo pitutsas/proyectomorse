@@ -38,7 +38,7 @@ int send(char a[]) { // Función send para separar y enviar un string mediante c
 }
 
 int del() { // Funcion del(ete) para borrar limpiar todo de manera rapida
-    uart_putc(UART_ID,3);
+    uart_putc(UART_ID,'R');
 }
 
 int main()
@@ -51,7 +51,7 @@ int main()
 
     sleep_ms(1000); // espero 1s para estar chill de cojones
     del();
-    send("R-.. . ... .- .--. .-. --- -... .- .-. . -- --- ..."); // R al principio para hacer reset
+    send("R-.. . ... .- .--. .-. --- -... .- .-. . -- --- ..."); // Poner una 'R' es otro modo de hacer reset/del
 
     while (true) {
         sleep_ms(100);
