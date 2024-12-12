@@ -33,6 +33,8 @@ int send(char a[]) { // Función send para separar y enviar un string mediante c
         i++;
         sleep_ms(200);
     }
+    sleep_ms(200);
+    uart_putc(UART_ID,' '); // Llegue al final, envio un espacio para decodificar la ultima letra
 }
 
 int del() { // Funcion del(ete) para borrar limpiar todo de manera rapida
@@ -49,7 +51,7 @@ int main()
 
     sleep_ms(1000); // espero 1s para estar chill de cojones
     del();
-    send("R-.. . ... .- .--. .-. --- -... .- .-. . -- --- ... ");
+    send("R-.. . ... .- .--. .-. --- -... .- .-. . -- --- ..."); // R al principio para hacer reset
 
     while (true) {
         sleep_ms(100);
