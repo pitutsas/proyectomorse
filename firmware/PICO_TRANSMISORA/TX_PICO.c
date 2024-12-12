@@ -50,7 +50,6 @@ int main()
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
 
     sleep_ms(1000); // espero 1s para estar chill de cojones
-    del();
     send("R-.. . ... .- .--. .-. --- -... .- .-. . -- --- ..."); // Poner una 'R' es otro modo de hacer reset/del
 
     while (true) {
